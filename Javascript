@@ -1,0 +1,12 @@
+// Simple script to toggle the gallery visibility
+document.addEventListener('DOMContentLoaded', function() {
+    const gallery = document.querySelector('.gallery');
+    const toggleButton = document.createElement('button');
+    toggleButton.textContent = 'Toggle Gallery';
+    toggleButton.style.marginBottom = '10px';
+    gallery.parentElement.insertBefore(toggleButton, gallery);
+    
+    toggleButton.addEventListener('click', function() {
+        gallery.style.display = gallery.style.display === 'none' ? 'flex' : 'none';
+    });
+});
